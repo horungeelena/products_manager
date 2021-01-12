@@ -1,6 +1,14 @@
 package ru.netology.domain;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
+
 import java.util.Objects;
+
+@Data
+@EqualsAndHashCode
+@ToString
 
 public class Product {
   private int id;
