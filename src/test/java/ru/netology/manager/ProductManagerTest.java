@@ -52,4 +52,18 @@ class ProductManagerTest {
         Product[] actual = manager.searchBy("Fourth");
         assertArrayEquals(expected, actual);
     }
+
+    @Test
+    void  shouldRemoveById() {
+        int id = 1;
+        manager.removeById(id);
+        Product[] expected = new Product[]{product2, product3, product4};
+        Product[] actual = manager.getAll();
+        assertArrayEquals(expected, actual);
+    }
+    @Test
+    void  shouldRemoveIfExists() {
+        int idToRemove = 1;
+        manager.removeById(idToRemove);
+    }
 }
